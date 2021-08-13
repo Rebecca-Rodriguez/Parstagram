@@ -91,11 +91,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="423" id="OYQ-g4-ITU" customClass="PostCell" customModule="Instagram" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="423"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="431" id="OYQ-g4-ITU" customClass="PostCell" customModule="Instagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="431"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OYQ-g4-ITU" id="n4S-0d-zW8">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="423"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="431"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v9p-o2-QiD">
@@ -106,13 +106,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Becca" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1V-8w-8Yr">
-                                                    <rect key="frame" x="8" y="390" width="48" height="21"/>
+                                                    <rect key="frame" x="8" y="390" width="48" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Cool pic" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5u-uB-Mi2">
-                                                    <rect key="frame" x="64" y="390" width="62" height="20.333333333333314"/>
+                                                    <rect key="frame" x="64" y="390" width="306" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -123,13 +123,21 @@
                                                 <constraint firstItem="J1V-8w-8Yr" firstAttribute="top" secondItem="v9p-o2-QiD" secondAttribute="bottom" constant="8" id="9rB-cS-FVQ"/>
                                                 <constraint firstItem="v9p-o2-QiD" firstAttribute="leading" secondItem="n4S-0d-zW8" secondAttribute="leading" constant="8" id="AhP-CK-YhT"/>
                                                 <constraint firstItem="a5u-uB-Mi2" firstAttribute="top" secondItem="v9p-o2-QiD" secondAttribute="bottom" constant="8" symbolic="YES" id="Cmg-2C-Eug"/>
+                                                <constraint firstAttribute="bottom" secondItem="J1V-8w-8Yr" secondAttribute="bottom" constant="11" id="TNz-8J-7HX"/>
+                                                <constraint firstItem="a5u-uB-Mi2" firstAttribute="bottom" secondItem="n4S-0d-zW8" secondAttribute="bottomMargin" id="c4j-tj-mD6"/>
                                                 <constraint firstAttribute="trailing" secondItem="v9p-o2-QiD" secondAttribute="trailing" constant="8" id="cIG-5t-GSs"/>
                                                 <constraint firstAttribute="trailing" secondItem="a5u-uB-Mi2" secondAttribute="trailing" constant="8" id="ctX-of-0J7"/>
                                                 <constraint firstItem="v9p-o2-QiD" firstAttribute="top" secondItem="n4S-0d-zW8" secondAttribute="top" constant="8" id="rWf-ar-cTD"/>
                                                 <constraint firstItem="a5u-uB-Mi2" firstAttribute="leading" secondItem="J1V-8w-8Yr" secondAttribute="trailing" constant="8" id="z69-PE-JdZ"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="a5u-uB-Mi2" secondAttribute="bottom" constant="8" id="zY4-0e-uNx"/>
+                                                <constraint firstItem="a5u-uB-Mi2" firstAttribute="bottom" secondItem="n4S-0d-zW8" secondAttribute="bottomMargin" constant="11" id="zeR-iN-gSk"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="captionLabel" destination="a5u-uB-Mi2" id="Lzd-UM-Xkp"/>
+                                            <outlet property="photoView" destination="v9p-o2-QiD" id="VO2-c4-vE9"/>
+                                            <outlet property="usernameLabel" destination="J1V-8w-8Yr" id="ov0-dD-CHG"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -144,6 +152,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="7Gp-p0-eBp" id="40W-H5-Wx9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eQi-ma-6YH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
